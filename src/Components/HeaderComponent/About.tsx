@@ -34,6 +34,9 @@ function About() {
               sx={{
                 ml: 2,
                 my: 1,
+                "&:hover": {
+                  backgroundColor: "white",
+                },
               }}
             >
               ArvindBatham600@gmail.com
@@ -46,7 +49,7 @@ function About() {
               target="_blank"
               sx={{
                 "&:hover": {
-                  backgroundColor: "black",
+                  backgroundColor: "white",
                 },
               }}
             >
@@ -57,7 +60,7 @@ function About() {
               target="_blank"
               sx={{
                 "&:hover": {
-                  backgroundColor: "black",
+                  backgroundColor: "white",
                 },
               }}
             >
@@ -68,7 +71,7 @@ function About() {
               target="_blank"
               sx={{
                 "&:hover": {
-                  backgroundColor: "black",
+                  backgroundColor: "white",
                 },
               }}
             >
@@ -119,16 +122,18 @@ function About() {
           }}
         >
           I'm currently pursuing Bachelor Degree in Computer Science at{" "}
-          <a href="https://www.hansrajcollege.ac.in/">
+          <a target="_blank" href="https://www.hansrajcollege.ac.in/">
             Hansraj College, Delhi University
           </a>
           .
         </Typography>
         <Button
+          target="_blank"
           variant="contained"
           color="secondary"
           sx={{
-            my: 2,
+            mt: 2,
+            mb: 4,
           }}
           startIcon={<TextSnippetIcon />}
           href="https://drive.google.com/file/d/1xSht9bQBrXbxu8dFsMC5sB8XKvNhP71N/view?usp=sharing"

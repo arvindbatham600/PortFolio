@@ -1,7 +1,6 @@
 .headerContainer{
    width: 100%;
    height: auto;
-   min-height: 80vh;
    background-color: #1e1e1e;
 
 }
@@ -41,4 +40,10 @@
 a{
    text-decoration: none;
    color: rgb(34, 130, 194);
+}
+
+svg:hover{
+   height: 10px;
+
+   /* background-color: pink; */
 }

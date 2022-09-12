@@ -4,9 +4,6 @@ import TechStack from "../TechStack/TechStack";
 import About from "./About";
 import Navbar from "./Navbar";
 
-const headerTitle = {};
-
-const headerContent = {};
 
 function Header() {
   return (
