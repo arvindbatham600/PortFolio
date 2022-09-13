@@ -1,14 +1,16 @@
-import React from 'react'
-import Header from './HeaderComponent/Header'
-import Projects from './Projects/Projects'
+import React from "react";
+import Contact from "./Contact/Contact";
+import Header from "./HeaderComponent/Header";
+import Projects from "./Projects/Projects";
 
 function Layout() {
   return (
-      <>
-          <Header />
-          <Projects/>
-      </>
-  )
+    <>
+      <Header />
+      <Projects />
+      <Contact />
+    </>
+  );
 }
 
-export default Layout
+export default Layout;

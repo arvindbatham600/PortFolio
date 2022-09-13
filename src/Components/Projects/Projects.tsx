@@ -8,13 +8,13 @@ import projects from "./projects-list";
 import { Box } from "@mui/system";
 import style from "../HeaderComponent/Header.module.css";
 import { IconButton } from "@mui/material";
-import GitHubIcon from '@mui/icons-material/GitHub'
+import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
-import {Stack} from '@mui/material'
+import { Stack } from "@mui/material";
 export default function Projects() {
   return (
     <Box className={style.headerContainer}>
-      <Typography  padding={4} fontWeight="bold" variant="h5" color="white">
+      <Typography padding={4} fontWeight="bold" variant="h5" color="white">
         Projects
       </Typography>
       <Box
@@ -24,12 +24,15 @@ export default function Projects() {
           justifyContent: "center",
         }}
       >
-        {projects.map((project, index) => {
+        {projects.map((project) => {
           return (
             <Card
+              variant="outlined"
               sx={{
                 maxWidth: 345,
                 m: 2,
+                border: "2px solid black",
+                "&:hover": {},
               }}
             >
               <CardMedia
@@ -42,7 +45,7 @@ export default function Projects() {
                 <Typography gutterBottom variant="h5" component="div">
                   {project.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body1" color="text.primary">
                   {project.description}
                 </Typography>
               </CardContent>
@@ -55,17 +58,29 @@ export default function Projects() {
                   flexWrap: "wrap",
                 }}
               >
-                <Box className="jai">
+                <Box>
                   <Box
                     sx={{
-                      display: "Flex",
-                      justifyContent: "center",
+                      display: "display",
+                      mxy: "auto",
                     }}
                   >
-                    <IconButton>
+                    <IconButton
+                      href={project.github}
+                      target="_blank"
+                      sx={{
+                        color: "black",
+                      }}
+                    >
                       <GitHubIcon />
                     </IconButton>
-                    <IconButton href={project.visit} target = "_blank">
+                    <IconButton
+                      href={project.visit}
+                      target="_blank"
+                      sx={{
+                        color: "black",
+                      }}
+                    >
                       <LaunchIcon />
                     </IconButton>
                   </Box>
@@ -85,7 +100,7 @@ export default function Projects() {
                           sx={{
                             m: 1,
                             borderRadius: "10px",
-                            backgroundColor: "gray",
+                            backgroundColor: "rgba(0, 0, 0, 0.829)",
                             color: "white",
 
                             fontSize: "10px",
@@ -102,12 +117,6 @@ export default function Projects() {
                   </Box>
                 </Box>
               </CardActions>
-              <Stack
-                spacing={2}
-                sx={{
-                  display: "flex",
-                }}
-              ></Stack>
             </Card>
           );
         })}

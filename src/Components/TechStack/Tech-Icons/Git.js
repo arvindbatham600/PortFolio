@@ -5,6 +5,10 @@ const icon = {
   fill: "#F05032",
   display: "inline-block",
   margin: "4px auto",
+  "&:hover": {
+    backgroundColor: "white",
+    color: "black",
+  },
 };
 
 function Git() {

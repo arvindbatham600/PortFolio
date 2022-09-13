@@ -12,9 +12,9 @@ const projects = [
   {
     title: "AB Restaurant",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "This is a Restaurant Website which was developed by me using HTML, CSS and JavaScript.",
     image: require("../Assets/Images/Projects-Pictures/Restaurant.png"),
-    tags: ["HTML5", "CSS3", "JavaScript"],
+    tags: ["HTML5", "CSS3", "JavaScript", "BootStrap"],
     visit: "https://arvindbatham600.github.io/Restaurant/",
     github: "https://github.com/arvindbatham600/Restaurant",
     id: 2,
@@ -22,16 +22,17 @@ const projects = [
   {
     title: "Raise DU",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "This is a crowd-funding website, which is meant to raise fund for student societies of Delhi University.",
     image: require("../Assets/Images/Projects-Pictures/RaiseDU.png"),
     tags: ["HTML5", "CSS3", "JavaScript", "React", "Firebase"],
     visit: "https://raisedu.netlify.app/",
+    github: "https://github.com/arvindbatham600/",
     id: 3,
   },
   {
     title: "Passanger Counter APP",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "This is a Passanger Counter App, which is used to count the number of passangers in a bus.",
     image: require("../Assets/Images/Projects-Pictures/passanger.png"),
     tags: ["HTML5", "CSS3", "JavaScript"],
     visit: "https://arvindbatham600.github.io/JS-Passenger-Counter-App/",
@@ -41,9 +42,9 @@ const projects = [
   {
     title: "Google Home Page",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "This is a Google Home Page, which is developed by me using HTML and CSS.",
     image: require("../Assets/Images/Projects-Pictures/google.png"),
-    tags: ["HTML5", "CSS3", "JavaScript"],
+    tags: ["HTML5", "CSS3"],
     visit: "https://arvindbatham600.github.io/Google-clone/",
     github: "https://github.com/arvindbatham600/Google-clone",
     id: 4,
