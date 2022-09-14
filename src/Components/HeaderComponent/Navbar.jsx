@@ -13,7 +13,6 @@ const appbar = {
 const toolbar = {
   display: 'flex',
   justifyContent: 'space-between',
-  
 }
 
 
@@ -24,7 +23,7 @@ export default function Navbar() {
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
     { title: 'Projects', path: '/projects' },
-    { title: 'Contact', path: '/contact' },
+    { title: 'Contact', path: '#contact' },
   ]
 
   const theme = useTheme()
