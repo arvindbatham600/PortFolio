@@ -42,7 +42,7 @@ function Contact() {
     isMatch ? (width = "70%") : (width = "50%");
   }
   return (
-    <Box>
+    <Box id="contact">
       <Typography
         gutterBottom
         variant="h5"

@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/** For smooth scroll when clicking on a link */
+html {
+  scroll-behavior: smooth;
+}
