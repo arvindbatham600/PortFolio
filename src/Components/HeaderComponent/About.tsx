@@ -122,7 +122,7 @@ function About() {
           }}
         >
           I'm currently pursuing Bachelor Degree in Computer Science at{" "}
-          <a target="_blank" href="https://www.hansrajcollege.ac.in/">
+          <a target="_blank" href="https://www.hansrajcollege.ac.in/" rel="Hansraj College" >
             Hansraj College, Delhi University
           </a>
           .

@@ -1,6 +1,6 @@
 import React from 'react'
-import { IconButton, Menu, MenuItem} from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton, Menu, MenuItem } from '@mui/material'
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { useState } from 'react';
 
 function NavMenu() {
@@ -25,8 +25,10 @@ const handleClose = () => {
         <MenuItem onClick={handleClose}>Projects</MenuItem>
         <MenuItem onClick={handleClose}>Contacts</MenuItem>
      </Menu>
-    <IconButton onClick={handleClick}  >
-        <MenuIcon  id = "resourses-icon" aria-controls= {open ? 'resourses-menu' : undefined} aria-haspopup = 'true' aria-expanded = {open ? 'true' : undefined} />
+      <IconButton sx={{
+      color: "white",
+    }} onClick={handleClick}  >
+        <MenuOpenIcon  id = "resourses-icon" aria-controls= {open ? 'resourses-menu' : undefined} aria-haspopup = 'true' aria-expanded = {open ? 'true' : undefined} />
     </IconButton>
     </>
   )

@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Box,
   Button,
@@ -6,10 +8,39 @@ import {
   Grid,
   TextField,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import style from '../HeaderComponent/Header.module.css'
+// import style from '../HeaderComponent/Header.module.css'
 
 function Contact() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    alert("Message sent successfully");
+    // e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_twaeodp",
+        "template_2f6hl9n",
+        form.current,
+        "BSuZA15gW82VWJAZi"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  let width = "0";
+  {
+    isMatch ? (width = "70%") : (width = "50%");
+  }
   return (
     <Box>
       <Typography
@@ -21,24 +52,21 @@ function Contact() {
           fontWeight: "bold",
           my: 4,
         }}
-        
       >
         Contact Me
       </Typography>
-      <Card 
-        className={style.card}
-        id = "screen"
+      <Card
+        id="screen"
         sx={{
           border: "2px solid gray",
           mb: 4,
           mx: "auto",
-          maxWidth: "50%",
+          maxWidth: { width },
           padding: "20px",
-          
         }}
       >
         <CardContent>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -46,7 +74,7 @@ function Contact() {
                   color="secondary"
                   required
                   id="firstName"
-                  name="firstName"
+                  name="user_firstName"
                   label="First Name"
                   placeholder="Enter First Name"
                   fullWidth
@@ -58,7 +86,7 @@ function Contact() {
                   color="secondary"
                   required
                   id="lastName"
-                  name="lastName"
+                  name="user_lastName"
                   label="Last Name"
                   fullWidth
                 />
@@ -69,9 +97,9 @@ function Contact() {
                   color="secondary"
                   required
                   id="email"
-                  name="email"
+                  name="user_email"
                   label="Email"
-                  placeholder="Enter Email"
+                  placeholder="Enter Email Id."
                   fullWidth
                   type="email"
                 />
@@ -81,8 +109,8 @@ function Contact() {
                   variant="outlined"
                   color="secondary"
                   required
+                  name="user_phone"
                   id="phone"
-                  name="phone"
                   label="Phone"
                   placeholder="Enter Phone No."
                   fullWidth
@@ -96,7 +124,7 @@ function Contact() {
                   color="secondary"
                   required
                   id="message"
-                  name="message"
+                  name="user_message"
                   label="Message"
                   placeholder="Type your message here"
                   fullWidth

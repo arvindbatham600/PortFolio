@@ -40,3 +40,9 @@ a {
   text-decoration: none;
   color: rgb(34, 130, 194);
 }
+
+/* @media (min-width: 0px) and (max-width: 999px) {
+  .card {
+    max-width: 70%;
+  }
+} */

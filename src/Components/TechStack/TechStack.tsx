@@ -11,7 +11,6 @@ import NodeJS from "./Tech-Icons/NodeJS";
 import Git from "./Tech-Icons/Git";
 import Nodemon from "./Tech-Icons/Nodemon";
 import MongoDB from "./Tech-Icons/MongoDB";
-import style from "../HeaderComponent/Header.module.css"
 
 function TechStack() {
   return (
