@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, Menu, MenuItem, Button } from "@mui/material";
+import { IconButton, Menu, MenuItem, Button, Box } from "@mui/material";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { useState } from "react";
 
@@ -22,8 +22,15 @@ function NavMenu() {
   ];
 
   return (
-    <>
+    <Box>
+   
+    <Box sx= {{
+      backgroundColor: "gray",
+    }} >
+
+    
       <Menu
+        sx={{}}
         open={open}
         anchorEl={anchorEl}
         id="resources-menu"
@@ -51,21 +58,18 @@ function NavMenu() {
         {menuLinks.map(({ title, path }) => {
           return (
             <MenuItem onClick={handleClose}>
-              <Button
-                // sx={{ marginRight: "10px" }}
-                key={title}
-                color="inherit"
-                href={path}
-              >
+              <Button key={title} color="inherit" href={path}>
                 {title}
               </Button>
             </MenuItem>
           );
         })}
       </Menu>
+      </Box>
       <IconButton
         sx={{
           color: "white",
+          bgcolor: open ? "black" : undefined,
         }}
         onClick={handleClick}
       >
@@ -76,7 +80,7 @@ function NavMenu() {
           aria-expanded={open ? "true" : undefined}
         />
       </IconButton>
-    </>
+    </Box>
   );
 }
 
