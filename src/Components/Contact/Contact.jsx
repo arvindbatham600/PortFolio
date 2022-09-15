@@ -1,5 +1,12 @@
-import { useRef } from "react";
+import React from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
+
 import {
   Box,
   Button,
@@ -11,13 +18,14 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-// import style from '../HeaderComponent/Header.module.css'
 
 function Contact() {
+  const [show, setShow] = React.useState(false);
+
   const form = useRef();
   const sendEmail = (e) => {
-    alert("Message sent successfully");
-    // e.preventDefault();
+    e.preventDefault();
+    setShow(true);
 
     emailjs
       .sendForm(
@@ -29,11 +37,20 @@ function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          console.log("form submitted with no errors");
         },
         (error) => {
           console.log(error.text);
+          console.log("form submitted with errors");
         }
       );
+
+    // hiding the alert box after 5 seconds
+    setTimeout(() => {
+      setShow(false);
+    }, 2500);
+
+    e.target.reset();
   };
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
@@ -87,6 +104,7 @@ function Contact() {
                   required
                   id="lastName"
                   name="user_lastName"
+                  placeholder="Enter Last Name"
                   label="Last Name"
                   fullWidth
                 />
@@ -146,6 +164,43 @@ function Contact() {
           </form>
         </CardContent>
       </Card>
+      <Box>
+        <Dialog
+          open={show}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle
+            sx={{
+              fontFamily: "Iosevka",
+              color: "success.main",
+              fontWeight: "bold",
+              backgroundColor: "black",
+            }}
+            id="alert-dialog-title"
+          >
+            <Button
+              disableElevation
+              disableRipple
+              color="success"
+              startIcon={<CheckCircleRoundedIcon />}
+            >
+              Form Submitted Successfully!
+            </Button>
+          </DialogTitle>
+          <DialogContent sx={{ margin: 1 }}>
+            <DialogContentText
+              sx={{
+                color: "black",
+              }}
+              id="alert-dialog-description"
+            >
+              Your message has been sent successfully. I will get back to you as
+              soon as possible.
+            </DialogContentText>
+          </DialogContent>
+        </Dialog>
+      </Box>
     </Box>
   );
 }

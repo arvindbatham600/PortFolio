@@ -12,7 +12,7 @@ import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 function About() {
   return (
-    <Box className={HeaderStyle.headerContainer}>
+    <Box id = "about" className={HeaderStyle.headerContainer}>
       <Box className={HeaderStyle.headerTop}>
         <Box>
           <img

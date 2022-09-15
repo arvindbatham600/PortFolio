@@ -10,10 +10,9 @@ import style from "../HeaderComponent/Header.module.css";
 import { IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
-import { Stack } from "@mui/material";
 export default function Projects() {
   return (
-    <Box className={style.headerContainer}>
+    <Box id = "projects" className={style.headerContainer}>
       <Typography padding={4} fontWeight="bold" variant="h5" color="white">
         Projects
       </Typography>

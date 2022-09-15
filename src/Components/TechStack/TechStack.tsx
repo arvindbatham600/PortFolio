@@ -15,6 +15,7 @@ import MongoDB from "./Tech-Icons/MongoDB";
 function TechStack() {
   return (
     <Box
+      id = "techstack"
       sx={{
         mt: 4,
         mb: 8,

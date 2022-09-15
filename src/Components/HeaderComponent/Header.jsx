@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 function Header() {
   return (
-    <Box>
+    <Box id = "home">
       <Navbar />
       <About />
       <TechStack />
