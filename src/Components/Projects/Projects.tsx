@@ -13,7 +13,9 @@ import LaunchIcon from "@mui/icons-material/Launch";
 export default function Projects() {
   return (
     <Box id = "projects" className={style.headerContainer}>
-      <Typography padding={4} fontWeight="bold" variant="h5" color="white">
+      <Typography sx={{
+        fontFamily: "Iosevka",
+      }} padding={4} fontWeight="bold" variant="h5" color="white">
         Projects
       </Typography>
       <Box

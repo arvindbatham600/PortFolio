@@ -26,7 +26,9 @@ function TechStack() {
         },
       }}
     >
-      <Typography m={4} fontWeight="bold" variant="h5" color="black">
+      <Typography sx={{
+        fontFamily: "Iosevka",
+      }} m={4} fontWeight="bold" variant="h5" color="black">
         Technologies I've Worked With.
       </Typography>
       <Grid container spacing={4}>
