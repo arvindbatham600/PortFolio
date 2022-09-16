@@ -12,7 +12,7 @@ import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 function About() {
   return (
-    <Box id = "about" className={HeaderStyle.headerContainer}>
+    <Box id="about" className={HeaderStyle.headerContainer}>
       <Box className={HeaderStyle.headerTop}>
         <Box>
           <img
@@ -122,7 +122,11 @@ function About() {
           }}
         >
           I'm currently pursuing Bachelor Degree in Computer Science at{" "}
-          <a target="_blank" href="https://www.hansrajcollege.ac.in/" rel="Hansraj College" >
+          <a
+            target="_blank"
+            href="https://www.hansrajcollege.ac.in/"
+            rel="noreferrer"
+          >
             Hansraj College, Delhi University
           </a>
           .
@@ -144,5 +148,5 @@ function About() {
     </Box>
   );
 }
-   
+
 export default About;
