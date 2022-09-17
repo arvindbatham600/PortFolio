@@ -108,7 +108,7 @@ function About() {
         >
           I'm super passionate about exploring and building open source web apps
           and tools. Currently I'm diving in the React ecosystem with backend in
-          Node.js. I work mostly on Front-end and occasionally on Backend.
+          Node.js. Mostly, I work on Front-end and occasionally on Backend.
         </Typography>
         <Typography
           variant="body2"
