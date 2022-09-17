@@ -140,7 +140,7 @@ function About() {
             mb: 4,
           }}
           startIcon={<TextSnippetIcon />}
-          href="https://drive.google.com/file/d/1xSht9bQBrXbxu8dFsMC5sB8XKvNhP71N/view?usp=sharing"
+          href="https://drive.google.com/file/d/1EFBJLeG2BlMhBAOyS-ysNnckgcVIU0nA/view?usp=sharing"
         >
           View Resume
         </Button>
