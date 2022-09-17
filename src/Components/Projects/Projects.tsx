@@ -1,5 +1,5 @@
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+// import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
@@ -12,10 +12,16 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 export default function Projects() {
   return (
-    <Box id = "projects" className={style.headerContainer}>
-      <Typography sx={{
-        fontFamily: "Iosevka",
-      }} padding={4} fontWeight="bold" variant="h5" color="white">
+    <Box id="projects" className={style.headerContainer}>
+      <Typography
+        sx={{
+          fontFamily: "Iosevka",
+        }}
+        padding={4}
+        fontWeight="bold"
+        variant="h5"
+        color="white"
+      >
         Projects
       </Typography>
       <Box
@@ -32,7 +38,7 @@ export default function Projects() {
               sx={{
                 maxWidth: 345,
                 m: 2,
-                border: "2px solid black",
+                border: "2px solid secondary",
                 "&:hover": {},
               }}
             >
@@ -51,73 +57,58 @@ export default function Projects() {
                 </Typography>
               </CardContent>
 
-              <CardActions
+              <Box>
+                <IconButton
+                  href={project.github}
+                  target="_blank"
+                  sx={{
+                    color: "black",
+                  }}
+                >
+                  <GitHubIcon />
+                </IconButton>
+                <IconButton
+                  href={project.visit}
+                  target="_blank"
+                  sx={{
+                    color: "black",
+                  }}
+                >
+                  <LaunchIcon />
+                </IconButton>
+              </Box>
+              <Box
                 sx={{
                   display: "flex",
-                  //   justifyContent: "space-between",
                   alignItems: "center",
+                  justifyContent: "center",
                   flexWrap: "wrap",
+                  marginBottom: 2.5
                 }}
               >
-                <Box>
-                  <Box
-                    sx={{
-                      display: "display",
-                      mxy: "auto",
-                    }}
-                  >
-                    <IconButton
-                      href={project.github}
-                      target="_blank"
+                {project.tags.map((tag) => {
+                  return (
+                    <Button
+                      size="small"
                       sx={{
-                        color: "black",
+                        my: 1,
+                        mx: 1.5,
+                        borderRadius: "10px",
+                        backgroundColor: "rgba(0, 0, 0, 0.829)",
+                        color: "white",
+
+                        fontSize: "10px",
+                        "&:hover": {
+                          backgroundColor: "white",
+                          color: "black",
+                        },
                       }}
                     >
-                      <GitHubIcon />
-                    </IconButton>
-                    <IconButton
-                      href={project.visit}
-                      target="_blank"
-                      sx={{
-                        color: "black",
-                      }}
-                    >
-                      <LaunchIcon />
-                    </IconButton>
-                  </Box>
-
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    {project.tags.map((tag) => {
-                      return (
-                        <Button
-                          size="small"
-                          sx={{
-                            m: 1,
-                            borderRadius: "10px",
-                            backgroundColor: "rgba(0, 0, 0, 0.829)",
-                            color: "white",
-
-                            fontSize: "10px",
-                            "&:hover": {
-                              backgroundColor: "white",
-                              color: "black",
-                            },
-                          }}
-                        >
-                          {tag}
-                        </Button>
-                      );
-                    })}
-                  </Box>
-                </Box>
-              </CardActions>
+                      {tag}
+                    </Button>
+                  );
+                })}
+              </Box>
             </Card>
           );
         })}
