@@ -55,6 +55,8 @@ function Contact() {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   let width = "0";
+  
+  // eslint-disable-next-line
   {
     isMatch ? (width = "70%") : (width = "50%");
   }
@@ -109,6 +111,7 @@ function Contact() {
                   fullWidth
                 />
               </Grid>
+            
               <Grid item xs={12}>
                 <TextField
                   variant="outlined"
@@ -143,7 +146,7 @@ function Contact() {
                   required
                   id="message"
                   name="user_message"
-                  label="Message"
+                  label="How can I help you?"
                   placeholder="Type your message here"
                   fullWidth
                   multiline

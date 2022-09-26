@@ -91,7 +91,7 @@ function About() {
             },
           }}
         >
-          Hello! I’m Arvind Batham, fullstack JavaScript developer based in
+          Hello! I'm Arvind Batham, fullstack JavaScript developer based in
           Gwalior Madhya Pradesh.
         </Typography>
 
@@ -140,7 +140,7 @@ function About() {
             mb: 4,
           }}
           startIcon={<TextSnippetIcon />}
-          href="https://drive.google.com/file/d/1EFBJLeG2BlMhBAOyS-ysNnckgcVIU0nA/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Gc0UPjInIwJfqA-BDrX9IK9LQSDW8nqh/view?usp=sharing"
         >
           View Resume
         </Button>

@@ -83,7 +83,7 @@ export default function Projects() {
                   alignItems: "center",
                   justifyContent: "center",
                   flexWrap: "wrap",
-                  marginBottom: 2.5
+                  marginBottom: 2.5,
                 }}
               >
                 {project.tags.map((tag) => {
