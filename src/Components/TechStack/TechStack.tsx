@@ -9,13 +9,15 @@ import ReactJS from "./Tech-Icons/ReactJS";
 import MaterialUI from "./Tech-Icons/MaterialUI";
 import NodeJS from "./Tech-Icons/NodeJS";
 import Git from "./Tech-Icons/Git";
+import Redux from "./Tech-Icons/Redux";
+import Socket from "./Tech-Icons/Socket";
 import Nodemon from "./Tech-Icons/Nodemon";
 import MongoDB from "./Tech-Icons/MongoDB";
 
 function TechStack() {
   return (
     <Box
-      id = "techstack"
+      id="techstack"
       sx={{
         mt: 4,
         mb: 8,
@@ -26,20 +28,19 @@ function TechStack() {
         },
       }}
     >
-      <Typography sx={{
-        fontFamily: "Iosevka",
-      }} m={4} fontWeight="bold" variant="h5" color="black">
+      <Typography
+        sx={{
+          fontFamily: "Iosevka",
+        }}
+        m={4}
+        fontWeight="bold"
+        variant="h5"
+        color="black"
+      >
         Technologies I've Worked With.
       </Typography>
       <Grid container spacing={4}>
-        <Grid
-          item
-          xs={6}
-          sm={6}
-          md={4}
-          lg={3}
-        >
-          
+        <Grid item xs={6} sm={6} md={4} lg={3}>
           <HTML5 />
           <Typography variant="body1">HTML5</Typography>
         </Grid>
@@ -59,7 +60,14 @@ function TechStack() {
           <Typography variant="body1">ReactJS</Typography>
         </Grid>
         <Grid item xs={6} sm={6} md={4} lg={3}>
+          <Redux />
+          <Typography variant="body1">Redux</Typography>
+        </Grid>
+        <Grid item xs={6} sm={6} md={4} lg={3}>
           <MaterialUI /> <Typography variant="body1">Material UI</Typography>
+        </Grid>
+        <Grid item xs={6} sm={6} md={4} lg={3}>
+          <Socket /> <Typography variant="body1">Socket.io</Typography>
         </Grid>
         <Grid item xs={6} sm={6} md={4} lg={3}>
           <NodeJS />

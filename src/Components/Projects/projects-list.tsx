@@ -1,5 +1,25 @@
 const projects = [
   {
+    title: "Flipkart Clone",
+    description:
+      "This is Flipkart Clone Project. It's a MERN project, tried to make it same. All the functionality will work excluding payment. ",
+    image: require("../Assets/Images/Projects-Pictures/flipkart.png"),
+    tags: ["React", "Material UI", "Redux", "MongoDB", "NodeJS", "Express"],
+    visit: "https://fine-cyan-snail-ring.cyclic.app/",
+    github: "https://github.com/arvindbatham600/FlipKart_Clone",
+    id: 1,
+  },
+  {
+    title: "Chaty",
+    description:
+      "It's a realtime chat application, people can talk each other on this platform. Socket.io library is used in this project.",
+    image: require("../Assets/Images/Projects-Pictures/chaty.png"),
+    tags: ["HTML5", "CSS3", "JavaScript", "Express", "Express", "NodeJS"],
+    visit: "https://github.com/arvindbatham600/Chaty#README.md",
+    github: "https://github.com/arvindbatham600/Chaty",
+    id: 2,
+  },
+  {
     title: "To-Do List",
     description:
       "This is To-Do List Project, you can make your tasks list. Used Tech Stack in this project are HTML5, CSS3, JavaScript, MongoDB, NodeJS",
@@ -7,7 +27,7 @@ const projects = [
     tags: ["HTML5", "CSS3", "JavaScript", "MongoDB", "NodeJS"],
     visit: "https://gentle-anchorage-53588.herokuapp.com/",
     github: "https://github.com/arvindbatham600/Todo_list-nodejs-mongodb",
-    id: 1,
+    id: 3,
   },
   {
     title: "AB Restaurant",
@@ -17,7 +37,7 @@ const projects = [
     tags: ["HTML5", "CSS3", "JavaScript", "BootStrap"],
     visit: "https://arvindbatham600.github.io/Restaurant/",
     github: "https://github.com/arvindbatham600/Restaurant",
-    id: 2,
+    id: 4,
   },
   {
     title: "Raise DU",
@@ -27,7 +47,7 @@ const projects = [
     tags: ["HTML5", "CSS3", "JavaScript", "React", "Firebase"],
     visit: "https://raisedu.netlify.app/",
     github: "https://github.com/arvindbatham600/",
-    id: 3,
+    id: 5,
   },
   {
     title: "Passanger Counter APP",
@@ -37,7 +57,7 @@ const projects = [
     tags: ["HTML5", "CSS3", "JavaScript"],
     visit: "https://arvindbatham600.github.io/JS-Passenger-Counter-App/",
     github: "https://github.com/arvindbatham600/JS-Passenger-Counter-App",
-    id: 4,
+    id: 6,
   },
   {
     title: "Google Home Page",
@@ -47,7 +67,7 @@ const projects = [
     tags: ["HTML5", "CSS3"],
     visit: "https://arvindbatham600.github.io/Google-clone/",
     github: "https://github.com/arvindbatham600/Google-clone",
-    id: 4,
+    id: 7,
   },
 ];
 

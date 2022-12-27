@@ -4,6 +4,7 @@ export const techstack = [
     'JavaScript',
     'TypeScript',
     'React',
+    'Redux',
     'Node.js',
     'Express.js',
     'MongoDB',
