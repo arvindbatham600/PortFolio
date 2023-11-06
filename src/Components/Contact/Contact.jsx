@@ -27,23 +27,8 @@ function Contact() {
     e.preventDefault();
     setShow(true);
 
-    emailjs
-      .sendForm(
-        "service_twaeodp",
-        "template_2f6hl9n",
-        form.current,
-        "BSuZA15gW82VWJAZi"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("form submitted with no errors");
-        },
-        (error) => {
-          console.log(error.text);
-          console.log("form submitted with errors");
-        }
-      );
+   // use EmailJS function here.....
+    
 
     // hiding the alert box after 5 seconds
     setTimeout(() => {
